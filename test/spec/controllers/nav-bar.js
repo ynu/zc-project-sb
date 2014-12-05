@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: NavBarCtrl', function () {
 
   // load the controller's module
   beforeEach(module('appstoreApp'));
 
-  var MainCtrl,
+  var NavBarCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    NavBarCtrl = $controller('NavBarCtrl', {
       $scope: scope
     });
   }));

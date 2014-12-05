@@ -1,0 +1,113 @@
+<div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="DJRQ" class="col-sm-2 control-label">登记日期</label>
+            <div class="col-sm-4">
+                <input class="form-control datepicker" id="DJRQ" placeholder='点击此处填入日期'>
+            </div>
+            <label for="XMBH" class="col-sm-2 control-label">项目编号</label>
+            <div class="col-sm-4">
+                <input class="form-control" id="XMBH" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="CGLX">采购类型</label>
+            <div class="col-sm-4">
+                <select id="CGLX">
+                    <optgroup label="货物">
+                        <option value="ef7310b8-2d87-4413-acca-40f74a5d4447">货物(国产)</option>
+                        <option value="80d41a31-d5df-4834-bc3c-a5ce7b33df93">货物(进口)</option>
+                    </optgroup>
+                    <option value="b2d32432-a98c-4623-9ec4-ece821df4069">工程</option>
+                    <option value="79a3c345-ecbc-4ed6-8f08-b0d88167e375">服务</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="XMMC" class="col-sm-2 control-label">项目名称</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="XMMC" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="FZR" class="col-sm-2 control-label">负责人</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="FZR" placeholder="" />
+            </div>
+            <label for="JBR" class="col-sm-2 control-label">经办人</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="JBR" placeholder="">
+            </div>
+            <label for="JBR_LXDH" class="col-sm-2 control-label">联系电话</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="JBR_LXDH" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="YSZE" class="col-sm-2 control-label">预算总额</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="YSZE" placeholder="0.00">
+            </div>
+            <label for="CWBM" class="col-sm-2 control-label">财务编码</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="CWBM" placeholder="">
+            </div>
+            <label for="JFLY" class="col-sm-2 control-label">经费来源</label>
+            <div class="col-sm-2">
+                <input class="form-control" id="JFLY" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="GZLY" class="col-sm-2 control-label">购置理由</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="GZLY"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary btn-block"
+                    onclick="toStep4();">
+                保存，下一步
+            </button>
+        </div>
+    </div>
+    <hr />
+    <div class="widget-box transparent">
+        <div class="widget-header widget-header-small">
+            <h4 class="widget-title blue smaller">
+                <i class="ace-icon fa fa-rss orange"></i>
+                项目动态
+            </h4>
+
+        </div>
+
+        <div class="widget-body">
+            <div class="widget-main padding-8">
+                <!-- #section:pages/profile.feed -->
+
+                <div id="sbb_log" class="profile-feed">
+                    {{#.}}
+                    <div class="profile-activity clearfix">
+                        <div>
+                            <a class="user" href="#" data-conceptid="{{UserId}}"> {{UserId}} </a>
+                            {{ActionText}}
+                            <b>{{ObjectText}}</b>
+                            <div class="time">
+                                <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                {{DateText}}
+                            </div>
+                        </div>
+
+                    </div>
+                    {{/.}}
+                </div>
+
+                <!-- /section:pages/profile.feed -->
+            </div>
+        </div>
+    </div>
+
+</div>

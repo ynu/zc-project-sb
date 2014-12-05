@@ -1,0 +1,63 @@
+﻿
+
+<div class="page-header">
+    <h1>
+        分类应用
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-sm-9">
+
+        <div class="panel panel-primary" ng-repeat="category in categories track by $index" data-conceptid="{{category.ConceptId}}">
+            <div class="panel-body">
+
+                <h5>
+                    <i class="fa fa-leaf"></i>
+                    <strong>{{category.FriendlyNames[0]}}</strong>
+                </h5>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="media"></div>
+
+                    <div class="media col-lg-4" ng-repeat="app in category.apps track by $index">
+                        <a class="pull-left" href="{{app.Url}}" target="_blank">
+                            <img ng-if="app.ImgUrl" class="media-object" ng-src="{{app.ImgUrl}}" width="72px" height="72px">
+                            <img ng-if="app.ImgUrl === undefined" ng-src="http://www.network.ynu.edu.cn/images/appicons/icon_072.png" />
+                        </a>
+
+                        <div class="media-body">
+                            <h4 class="media-heading bolder">
+                                <a href="{{app.Url}}" class="app-title" target="_blank"> {{app.Name}} </a>
+                            </h4>
+                            {{app.Desc}}
+                            <div>归属单位：<span class=" bolder">{{depts[app.Dept].Name}}</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-3">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                
+                <h5>
+                <i class="fa fa-bullhorn"></i>
+                <strong>公告栏</strong>
+                </h5>
+            </div>
+            <div class="panel-footer">
+                云大应用中心试运行中，应用系统正在完善，如果您找不到您常用的应用系统，请告诉我们：na57@ynu.edu.cn
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.row -->

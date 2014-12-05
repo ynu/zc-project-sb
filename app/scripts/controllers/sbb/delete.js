@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name appstoreApp.controller:MainCtrl
+ * @name appstoreApp.controller:SbbDeleteCtrl
  * @description
- * # MainCtrl
+ * # SbbDeleteCtrl
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('SbbDeleteCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

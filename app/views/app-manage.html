@@ -1,0 +1,166 @@
+<div class="widget-box ui-sortable-handle">
+    <div class="widget-header">
+        <h5 class="widget-title">应用管理</h5>
+
+        <!-- #section:custom/widget-box.toolbar -->
+        <div class="widget-toolbar">
+
+            <a href="javascript:void(1)" ng-click="toCreateApp()"
+               data-toggle="modal" data-target="#modal-add-app">
+                <i class="ace-icon fa fa-plus"></i>
+            </a>
+
+            <a href="javascript:void(2)" data-target="#" data-action="collapse">
+                <i class="ace-icon fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- /section:custom/widget-box.toolbar -->
+    </div>
+
+    <div class="widget-body">
+        <div class="widget-main">
+            <table class="display table" id="table-appManage">
+                <thead>
+                    <tr>
+                        <td>应用名称</td>
+                        <td>归属部门</td>
+                        <td>简要描述</td>
+                        <td>类别</td>
+                        <td>应用Url</td>
+                        <td>图标</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="app in apps">
+                        <td>{{app.Name}}</td>
+                        <td>
+                            <span class="badge" ng-bind="depts['{{app.Dept}}'].Name"></span>
+                        </td>
+                        <td>{{app.Desc}}</td>
+                        <td>
+                            <div ng-repeat="c in app.Categories">
+                               <span ng-bind="categories['{{c}}'].FriendlyNames[0]" class="badge"></span>
+                            </div>
+                                 
+                        </td>
+                        <td>
+                            <a href="{{app.Url}}">{{app.Url}}</a>
+                        </td>
+                        <td>
+
+                            <img ng-if="app.ImgUrl" ng-src="{{app.ImgUrl}}" width="72px" height="72px"/>
+                            <img ng-if="app.ImgUrl === undefined" ng-src="http://www.network.ynu.edu.cn/images/appicons/icon_072.png" />
+
+                        </td>
+                        <td>
+                            <div class="hidden-sm hidden-xs action-buttons">
+                                <a class="green" href="javascript:void(4)" ng-click="toUpdateApp('{{app.Id}}')"
+                                   data-toggle="modal" data-target="#modal-add-app">
+                                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                </a>
+
+                                <a class="red" href="#">
+                                    <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--<div>
+    <form action="http://ngapi.ynu.edu.cn/ynuxg/ImportStudentData" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileupload" />
+        <input type="submit" />
+    </form>
+</div>-->
+
+<!-- Modal -->
+<div class="modal fade" id="modal-add-app" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">关闭</span>
+                </button>
+                <h4 class="modal-title" ng-bind="appDetail.title"></h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div id="app-add-alert" class="alert alert-danger" style="display:none">
+
+                    <strong>出错了！</strong>
+                    名称、描述、归属部门、Url必须填写
+                </div>
+
+
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="app-add-name" class="col-sm-2 control-label">名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" ng-model="appDetail.curApp.Name" class="form-control" id="app-add-name" placeholder="应用名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-add-intro" class="col-sm-2 control-label">描述</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-model="appDetail.curApp.Desc" id="app-add-intro" placeholder="应用的相关描述">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ap-add-bm" class="col-sm-2 control-label">归属部门</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="app-add-bm" ng-model="appDetail.curApp.Dept">
+                                <option value="">请选择部门</option>
+                                <optgroup ng-repeat="xb in getSubDepts()" label="{{xb.Name}}">
+                                    <option ng-repeat="dept in getSubDepts(xb.Id)" value="{{dept.Id}}">{{dept.Name}}</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="app-add-lb" class="col-sm-2 control-label">类别</label>
+                        <div class="col-sm-10">
+                            <select id="app-add-lb" class="form-control" multiple="multiple" ng-model="appDetail.curApp.Categories">
+                                <option ng-repeat="cat in categories track by $index" value="{{cat.ConceptId}}">{{cat.FriendlyNames[0]}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="app-add-url" class="col-sm-2 control-label">应用Url</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-model="appDetail.curApp.Url" id="app-add-url" placeholder="应用的Url">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="app-add-tb" class="col-sm-2 control-label">图标Url</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-model="appDetail.curApp.ImgUrl" id="app-add-tb" placeholder="应用图标">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button class="btn btn-primary"
+                                    ng-click="appDetail.submit()">
+                                提交
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

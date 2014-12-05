@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name appstoreApp.controller:MainCtrl
+ * @name appstoreApp.controller:PageHeaderCtrl
  * @description
- * # MainCtrl
+ * # PageHeaderCtrl
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('PageHeaderCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

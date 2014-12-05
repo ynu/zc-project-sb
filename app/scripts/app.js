@@ -2,32 +2,39 @@
 
 /**
  * @ngdoc overview
- * @name zcProjectSbApp
+ * @name appstoreApp
  * @description
- * # zcProjectSbApp
+ * # appstoreApp
  *
  * Main module of the application.
  */
+var NG_APP = 'appstoreApp';
 angular
-  .module('zcProjectSbApp', [
+  .module('appstoreApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'naguModule'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+      $routeProvider
+        .when('/sbb/list', {
+          templateUrl: 'views/sbb/list.html',
+          controller: 'SbbListCtrl'
+        })
+        .when('/sbb/show/:sbbId', {
+          templateUrl: 'views/sbb/show.html',
+          controller: 'SbbShowCtrl'
+        })
+        .when('/sbb/delete', {
+          templateUrl: 'views/sbb/delete.html',
+          controller: 'SbbDeleteCtrl'
+        })
+        .otherwise({
+            templateUrl: 'views/sbb/list.html',
+            controller: 'SbbListCtrl'
+        });
   });

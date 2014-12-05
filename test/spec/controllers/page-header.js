@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: PageHeaderCtrl', function () {
 
   // load the controller's module
   beforeEach(module('appstoreApp'));
 
-  var MainCtrl,
+  var PageHeaderCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    PageHeaderCtrl = $controller('PageHeaderCtrl', {
       $scope: scope
     });
   }));
