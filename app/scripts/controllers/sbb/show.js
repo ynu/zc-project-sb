@@ -49,4 +49,18 @@ angular.module('appstoreApp')
       sbbService.getSbbLog(sbbId).then(function (logs) {
           $scope.sbbLogs = logs;
       });
+
+      $scope.actions = {
+          save: function () {
+              var sbb = $scope.sbb;
+              if (sbb.CGLX == '' || sbb.XMMC == '') {
+                  alert('采购类型和项目名称必须填写');
+                  return;
+              }
+              $scope.loading.visible = true;
+              sbbService.updateSbb(sbb).then(function (sbb) {
+                  $scope.loading.visible = false;
+              });
+          }
+      };
   });
