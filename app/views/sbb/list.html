@@ -1,57 +1,63 @@
 
 
-<div class="page-header">
-    <h1>
-        采购申报表列表
-        <small>
-            <i class="ace-icon fa fa-angle-double-right"></i>
-
-        </small>
-    </h1>
-</div><!-- /.page-header -->
-
 <div class="row">
     <div class="col-sm-9">
-        {{hello}}
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>登记日期</td>
-                    <td>项目编号</td>
-                    <td>项目名称</td>
-                    <td>负责人</td>
-                    <td>状态</td>
-                    <td>预算总额</td>
-                    <td>操作</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="sbb in sbbList track by $index">
-                    <td><span>{{sbb.DJRQ | date: 'yyyy-MM-dd'}}</span></td>
-                    <td>{{sbb.XMBH}}</td>
-                    <td>{{sbb.XMMC}}</td>
-                    <td>{{sbb.FZR}}</td>
-                    <td>{{xb005[sbb.Status].Name}}</td>
-                    <td><span>{{sbb.YSZE | currency: '￥'}}</span></td>
-                    <td>
-                        <div class="hidden-sm hidden-xs action-buttons">
-                            <a class="blue" href="#/sbb/show/{{sbb.SbbId}}" title="查看申报表">
-                                <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                            </a>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">采购申报表列表</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>登记日期</td>
+                            <td>项目编号</td>
+                            <td>项目名称</td>
+                            <td>负责人</td>
+                            <td>状态</td>
+                            <td>预算总额</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="sbb in sbbList track by $index">
+                            <td><span>{{sbb.DJRQ | date: 'yyyy-MM-dd'}}</span></td>
+                            <td>{{sbb.XMBH}}</td>
+                            <td>{{sbb.XMMC}}</td>
+                            <td>{{sbb.FZR}}</td>
+                            <td>
+                                {{xb005[sbb.Status].Name}}
+                                <div ng-if="sbb.StatusMsg"><span class="badge">{{sbb.StatusMsg}}</span></div>
+                            </td>
+                            <td><span>{{sbb.YSZE | currency: '￥'}}</span></td>
+                            <td>
+                                <div class="hidden-sm hidden-xs action-buttons">
+                                    <a class="blue" href="#/sbb/show/{{sbb.SbbId}}" title="查看申报表">
+                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                    </a>
 
-                            <a class="green" href="">
-                                <i class="ace-icon fa fa-pencil bigger-130"></i>
-                            </a>
+                                    <a class="green" href="" title="提交申报表" ng-click="table.submitSbb('{{sbb.SbbId}}')">
+                                        <i class="ace-icon fa fa-check bigger-130"></i>
+                                    </a>
 
-                            <a class="red" href="#/sbb/delete/{{sbb.SbbId}}" title="删除申报表">
-                                <i class="ace-icon fa fa-trash-o bigger-130"></i>
-                            </a>
-                        </div>
-                    </td>
-                   
-                </tr>
-            </tbody>
-        </table>
+                                    <a class="red" href="" title="否决申报表" ng-click="table.denySbb('{{sbb.SbbId}}')">
+                                        <i class="ace-icon fa fa-ban bigger-130"></i>
+                                    </a>
+
+                                    <a class="red" href="#/sbb/delete/{{sbb.SbbId}}" title="删除申报表">
+                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                    </a>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-primary" href="#/sbb/new">创建申报表</a>
+            </div>
+        </div>
     </div>
     <div class="col-sm-3">
         <div class="panel panel-primary">

@@ -33,6 +33,10 @@ angular
           templateUrl: 'views/sbb/delete.html',
           controller: 'SbbDeleteCtrl'
         })
+        .when('/sbb/new', {
+          templateUrl: 'views/sbb/show.html',
+          controller: 'SbbNewCtrl'
+        })
         .otherwise({
             templateUrl: 'views/sbb/list.html',
             controller: 'SbbListCtrl'
