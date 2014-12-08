@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 /**
 * @ngInject
@@ -139,6 +139,29 @@ function sbbService($q) {
                     withCredentials: true
                 },
                 data: sbb,
+                success: function (result) {
+                    if (result.ret == 0) {
+                        dtd.resolve(result.data);
+                    }
+                    else dtd.reject(result);
+                },
+                error: function () {
+                    dtd.reject(result);
+                }
+            });
+
+            return dtd.promise;
+        },
+        addSbbItem: function(sbbItem){
+            var dtd = $q.defer();
+
+            $.ajax('http://ngapi.ynu.edu.cn/YnuZc/AddSbbItem/'+sbbItem.SbbId, {
+                type: 'POST',
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: sbbItem,
                 success: function (result) {
                     if (result.ret == 0) {
                         dtd.resolve(result.data);

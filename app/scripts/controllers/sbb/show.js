@@ -36,7 +36,6 @@ angular.module('appstoreApp')
               name: '采购申报表列表'
           },
           {
-              href: '#/sbb/show/' + sbbId,
               name: $scope.sbb.XMMC
           }
           ];

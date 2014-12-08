@@ -1,0 +1,96 @@
+﻿<div class="row">
+    <div class="col-sm-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">添加采购物品</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="XH" class="col-sm-2 control-label">序号</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="XH" ng-model="sbbItem.XH" placeholder="序号，请填入由“1”开始的阿拉伯数字">
+                        </div>
+                        <label for="LXDM" class="col-sm-2 control-label">货物类型</label>
+                        <div class="col-sm-3">
+                            <select id="LXDM" ng-model="sbbItem.LXDM">
+                                <option value="">请选择货物类型</option>
+                                <optgroup label="G1">
+                                    <option value="G11">G11 教学设备</option>
+                                    <option value="G12">G12 科研设备</option>
+                                    <option value="G13">G13 办公设备</option>
+                                    <option value="G14">G14 网络设备</option>
+                                    <option value="G19">G19 其他仪器设备</option>
+                                </optgroup>
+                                <optgroup label="G2">
+                                    <option value="G21">G21 课桌椅</option>
+                                    <option value="G22">G22 实验台桌</option>
+                                    <option value="G23">G23 办公家具</option>
+                                    <option value="G29">G29 其他家具</option>
+                                </optgroup>
+                                <optgroup label="G3">
+                                    <option value="G31">G31 教材</option>
+                                    <option value="G32">G32 图书期刊</option>
+                                    <option value="G33">G33 数据库</option>
+                                    <option value="G34">G34 软件</option>
+                                    <option value="G39">G39 其他知识产品</option>
+                                </optgroup>
+                                <optgroup label="G4">
+                                    <option value="G41">G41 实验材料</option>
+                                    <option value="G42">G42 低值品</option>
+                                    <option value="G43">G43 易耗品</option>
+                                    <option value="G44">G44 易制毒化学品</option>
+                                    <option value="G49">G49 其他低值易耗品</option>
+                                </optgroup>
+                                <option value="G9">其它货物</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="TYMC" class="col-sm-2 control-label">通用名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="TYMC" ng-model="sbbItem.TYMC" placeholder="通用名称">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SL" class="col-sm-2 control-label">数量</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="SL" placeholder="数量" ng-model="sbbItem.SL" 
+                                   ng-change="actions.computeHJJE();">
+                        </div>
+                        <label for="JLDW" class="col-sm-2 control-label">计量单位</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="JLDW" placeholder="计量单位" ng-model="sbbItem.JLDW">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="YSDJ" class="col-sm-2 control-label">预算单价(元)</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control col-sm-3" id="YSDJ" placeholder="预算单价(元)" ng-model="sbbItem.YSDJ"
+                                   ng-change="actions.computeHJJE();">
+                        </div>
+                        <label for="HJJE" class="col-sm-2 control-label">合计金额(元)</label>
+                        <div class="col-sm-4">
+                            <input type="text" readonly class="form-control" id="HJJE" ng-model="sbbItem.HJJE">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="JHDD" class="col-sm-2 control-label">交货地点</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="JHDD" placeholder="交货地点" ng-model="sbbItem.JHDD">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <button class="btn btn-info" ng-click="actions.saveAndReturn();">保存</button>
+                <button class="btn btn-primary" ng-click="actions.saveAndNew();">保存并继续添加</button>
+            </div>
+        </div>
+    </div>
+
+</div>

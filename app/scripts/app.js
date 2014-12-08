@@ -37,6 +37,10 @@ angular
           templateUrl: 'views/sbb/show.html',
           controller: 'SbbNewCtrl'
         })
+        .when('/sbb/createSbbItem/:sbbId', {
+          templateUrl: 'views/sbb/createsbbitem.html',
+          controller: 'SbbCreatesbbitemCtrl'
+        })
         .otherwise({
             templateUrl: 'views/sbb/list.html',
             controller: 'SbbListCtrl'

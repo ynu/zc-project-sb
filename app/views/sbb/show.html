@@ -45,11 +45,11 @@
                         </div>
                         <label for="JBR" class="col-sm-2 control-label">经办人</label>
                         <div class="col-sm-2">
-                            <input class="form-control" id="JBR" placeholder="" ng-model="JBR">
+                            <input class="form-control" id="JBR" placeholder="" ng-model="sbb.JBR">
                         </div>
                         <label for="JBR_LXDH" class="col-sm-2 control-label">联系电话</label>
                         <div class="col-sm-2">
-                            <input class="form-control" id="JBR_LXDH" placeholder="" ng-model="JBR_LXDH">
+                            <input class="form-control" id="JBR_LXDH" placeholder="" ng-model="sbb.JBR_LXDH">
                         </div>
                     </div>
                     <div class="form-group">
@@ -121,7 +121,7 @@
                 </table>
             </div>
             <div class="panel-footer">
-                <button class="btn-info btn">添加新项目</button>
+                <a class="btn-info btn" href="#/sbb/createSbbItem/{{sbb.SbbId}}">添加采购项</a>
             </div>
         </div>
 

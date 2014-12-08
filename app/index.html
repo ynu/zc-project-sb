@@ -298,7 +298,8 @@
             <div class="page-header">
                 <ol class="breadcrumb" >
                     <li ng-repeat="bc in breadcrumb track by $index">
-                        <a href="{{bc.href}}">{{bc.name}}</a>
+                        <a ng-if="bc.href" href="{{bc.href}}">{{bc.name}}</a>
+                        <span ng-if="!bc.href">{{bc.name}}</span>
                     </li>
                 </ol>
             </div>
@@ -395,6 +396,7 @@
     <script src="scripts/controllers/sbb/show.js"></script>
     <script src="scripts/controllers/sbb/delete.js"></script>
     <script src="scripts/controllers/sbb/new.js"></script>
+    <script src="scripts/controllers/sbb/createsbbitem.js"></script>
     <!-- endbuild -->
 </body>
 </html>
