@@ -41,6 +41,14 @@ angular
           templateUrl: 'views/sbb/createsbbitem.html',
           controller: 'SbbCreatesbbitemCtrl'
         })
+        .when('/login', {
+          templateUrl: 'views/login.html',
+          controller: 'LoginCtrl'
+        })
+        .when('/sbb/apply-user', {
+          templateUrl: 'views/sbb/apply-user.html',
+          controller: 'SbbApplyUserCtrl'
+        })
         .otherwise({
             templateUrl: 'views/sbb/list.html',
             controller: 'SbbListCtrl'

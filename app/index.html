@@ -129,16 +129,16 @@
                             <li class="divider"></li>
 
                             <li>
-                                <a href="#">
+                                <a href="#" ng-click="actions.logout();">
                                     <i class="ace-icon fa fa-power-off"></i>
-                                    Logout
+                                    退出
                                 </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="light-login hidden" ng-if="me && me.ret != 0">
-                        <a href="#" onclick="dlgLogin.toggle();">
+                    <li class="light-login" ng-if="me && !me.Id">
+                        <a href="#/login?returnUrl={{returnUrl}}">
                             <i class="ace-icon fa fa-user"></i>
                             登录
                         </a>
@@ -397,6 +397,8 @@
     <script src="scripts/controllers/sbb/delete.js"></script>
     <script src="scripts/controllers/sbb/new.js"></script>
     <script src="scripts/controllers/sbb/createsbbitem.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/sbb/apply-user.js"></script>
     <!-- endbuild -->
 </body>
 </html>

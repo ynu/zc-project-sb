@@ -36,15 +36,23 @@
                                         <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                     </a>
 
-                                    <a class="green" href="" title="提交申报表" ng-click="table.submitSbb('{{sbb.SbbId}}')">
+                                    <a class="green" href="" title="提交申报表" ng-click="actions.submitSbb('{{sbb.SbbId}}')"
+                                       ng-if="canSubmit(sbb.SbbId);">
+                                        <i class="ace-icon fa fa-arrow-up bigger-130"></i>
+                                    </a>
+
+                                    <a class="green" href="" title="通过申报表" ng-click="actions.passSbb('{{sbb.SbbId}}')"
+                                       ng-if="canPass(sbb.SbbId);">
                                         <i class="ace-icon fa fa-check bigger-130"></i>
                                     </a>
 
-                                    <a class="red" href="" title="否决申报表" ng-click="table.denySbb('{{sbb.SbbId}}')">
+                                    <a class="red" href="" title="否决申报表" ng-click="actions.denySbb('{{sbb.SbbId}}')"
+                                       ng-if="canDeny(sbb.SbbId);">
                                         <i class="ace-icon fa fa-ban bigger-130"></i>
                                     </a>
 
-                                    <a class="red" href="#/sbb/delete/{{sbb.SbbId}}" title="删除申报表">
+                                    <a class="red" href="#/sbb/delete/{{sbb.SbbId}}" title="删除申报表"
+                                       ng-if="canDelete(sbb.SbbId);">
                                         <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                     </a>
                                 </div>
