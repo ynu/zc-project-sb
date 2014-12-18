@@ -8,7 +8,7 @@
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('HeaderCtrl', function ($scope, $location, $rootScope, angularNagu) {
+  .controller('HeaderCtrl', function ($scope, $location, $rootScope, naguBz) {
 
       if ($rootScope.loading === undefined)
           $rootScope.loading = {
@@ -26,7 +26,7 @@ angular.module('appstoreApp')
       }
 
       // 初始化部门列表 v2
-      angularNagu.YB.getXB001().then(function (xb001) {
+      naguBz.Ynu.XB001.getBzItems().then(function (xb001) {
           $rootScope.depts = xb001;
           $rootScope.getSubDepts = function (parentId) {
               if (parentId === undefined) parentId = YB.XB.XB001Id;
@@ -41,5 +41,5 @@ angular.module('appstoreApp')
           }
       });
 
-      
+
   });

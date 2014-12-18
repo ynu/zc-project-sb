@@ -1,0 +1,151 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">采购计划表信息</h3>
+  </div>
+  <div class="panel-body">
+    <div class="alert alert-info" role="alert">
+      <strong>注意！</strong> 填写计划表之前请县简称以下信息是否正确
+    </div>
+    <dl class="dl-horizontal">
+      <dt>年度</dt>
+      <dd>{{jhb.Nd | date: 'yyyy'}}</dd>
+      <dt>单位名称</dt>
+      <dd>
+        {{xb001[jhb.DwId].Name}}</dd>
+      <dt>资产管理员</dt>
+      <dd>{{member.Name}}</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">填写采购计划表信息</h3>
+  </div>
+  <div class="panel-body">
+    <div class="form-horizontal">
+
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >登记日期</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder="填入日期，格式如：“2015-01-03”"
+                 ng-model="jhb.Djrq">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >项目编号</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder=""
+                 ng-model="jhb.Xmbh">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >采购类型</label>
+        <div class="col-sm-10">
+          <select ng-model="jhb.CglxId" >
+            <option value="">请选择采购类型</option>
+            <optgroup label="G-货物">
+              <option value="33ef1149-98a5-4e64-9324-68968f589c9c">国产</option>
+              <option value="ae134628-5faf-4cd7-8dd2-55700287a1bf">进口</option>
+            </optgroup>
+            <option value="08ad9497-25fb-4870-83fc-f8360beccb34">C-工程</option>
+            <option value="da7e2092-1873-4c5e-b3bb-affc24a49211">S-服务</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >负责人</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder=""
+                 ng-model="jhb.Fzr">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >联系电话</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder=""
+                 ng-model="jhb.Lxdh">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >经费来源</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder=""
+                 ng-model="jhb.Jfly">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" >备注</label>
+        <div class="col-sm-10">
+          <input class="form-control"  placeholder=""
+                 ng-model="jhb.Bz">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="panel-footer">
+    <button class="btn btn-primary" ng-click="actions.createOrSaveJhb();">确定</button>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary" ng-if="jhb && jhb.Id">
+  <div class="panel-heading">
+    <h3 class="panel-title">计划采购项目清单</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <td>序号</td>
+        <td>类型代码</td>
+        <td>通用名称</td>
+        <td>数量</td>
+        <td>计量单位</td>
+        <td>预算单价(元)</td>
+        <td>合计金额(元)</td>
+        <td>交货地点</td>
+        <td>操作</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in jhb.Items track by $index">
+        <td>{{$index + 1}}</td>
+        <td>{{xb009[item.HwlxId].Name}}</td>
+        <td>{{item.Tymc}}</td>
+        <td>{{item.Sl}}</td>
+        <td>{{item.Jldw}}</td>
+        <td>{{item.Ysdj | currency: '￥'}}</td>
+        <td>{{item.Sl * item.Ysdj | currency: '￥'}}</td>
+        <td>{{item.Jhdd}}</td>
+        <td>
+          <div class="btn-group">
+            <a class="btn btn-xs btn-primary" href="#/jh/detail/{{jhb.Id}}" title="查看采购项目">
+              <i class="ace-icon fa fa-search-plus bigger-120"></i>
+            </a>
+
+            <button class="btn btn-xs btn-danger" title="删除计划采购项目" ng-click="actions.deleteItem(item);">
+              <i class="ace-icon fa fa-trash-o bigger-120"></i>
+            </button>
+
+
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-footer">
+    <a class="btn btn-primary" href="#/jh/item/new/{{jhb.Id}}">添加项目</a>
+  </div>
+</div>
+

@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-sm-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">采购计划表列表</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <td>登记日期</td>
+            <td>项目编号</td>
+            <td>单位名称</td>
+            <td>年度</td>
+            <td>采购类型</td>
+            <td>状态</td>
+            <td>操作</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="jhb in jhbList track by $index">
+            <td><span>{{jhb.Djrq | date: 'yyyy-MM-dd'}}</span></td>
+            <td>{{jhb.Xmbh}}</td>
+            <td>{{xb001[jhb.DwId].Name}}</td>
+            <td>{{jhb.Nd | date: 'yyyy'}}</td>
+            <td>{{xb010[jhb.CglxId].Name}}</td>
+            <td>
+              <span class="label label-sm label-warning" ng-if="!jhb.IsSubmit">未提交</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmit">已提交</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmit && !jhb.IsApproved">未通过</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmit && jhb.IsApproved">已通过</span>
+              <div ng-if="jhb.Msg"><span class="label label-info">{{jhb.Msg}}</span></div>
+            </td>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-xs btn-primary" href="#/jh/detail/{{jhb.Id}}" title="查看计划表">
+                  <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                </a>
+
+                <button class="btn btn-xs btn-success" title="提交计划表"
+                        ng-click="actions.submit(jhb);"
+                        ng-if="controls.canSubmit(jhb);">
+                  <i class="ace-icon fa fa-check bigger-120"></i>
+                </button>
+
+                <button class="btn btn-xs btn-danger" title="删除计划表"
+                        ng-click="actions.remove(jhb);"
+                        ng-if="controls.canDelete(jhb);">
+                  <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                </button>
+
+                <a class="btn btn-xs btn-primary" target="_blank" href="http://ngapi.ynu.edu.cn/ZcCgJh/Download?jhbId={{jhb.Id}}&&appId={{jhb.AppId}}" title="下载计划表">
+                  <i class="ace-icon fa fa-file-word-o bigger-120"></i>
+                </a>
+
+              </div>
+            </td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <a class="btn btn-primary" href="#/jh/new">创建计划表</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="panel-title"><i class="fa fa-bullhorn"></i> 公告栏</div>
+      </div>
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.row -->

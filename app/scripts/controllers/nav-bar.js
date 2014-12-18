@@ -9,7 +9,7 @@
  */
 angular.module('appstoreApp')
   .controller('NavBarCtrl', function ($scope, $q, $rootScope, $location, naguMM,sbbService) {
-      $scope.version = '1.2.0';
+      $scope.version = '1.3.0';
       $scope.me = {};
 
       naguMM.getMe().then(function (me) {
@@ -26,12 +26,12 @@ angular.module('appstoreApp')
                   }
           });
       })
-      
-      
+
+
       $scope.actions = {
           logout: function () {
               naguMM.logout().then(function () {
-                  $location.url('/login?returnUrl=' + $scope.returnUrl);
+                window.location = 'http://members.apps.ynu.edu.cn/#/user/login?returnUrl='+ encodeURIComponent($location.absUrl());
               });
           }
       };

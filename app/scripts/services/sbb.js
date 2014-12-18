@@ -95,7 +95,7 @@ function sbbService($q) {
                                 log.DateCreated = new Date(parseInt(log.DateCreated.substr(6)));
                             }
                         })
-                        
+
                         dtd.resolve(result.data);
                     }
                     else dtd.reject();
@@ -213,7 +213,14 @@ function sbbService($q) {
             CGGLY: '6f115582-0fd5-4c50-b6a6-20668ceeef03',                      // 采购管理员
             SQZ: '0fd0b62d-8a5f-4be9-b83b-9df628c7b916',                         // 采购系统用户申请者
             User: 'c8611863-76bf-4dab-a897-e9048e608be2'
-        }
+        },
+      applyUser: function(){
+        var dtd = $q.defer();
+
+
+
+        return dtd.promise;
+      }
     };
 }
 

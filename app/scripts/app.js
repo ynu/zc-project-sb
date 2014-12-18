@@ -17,7 +17,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'naguModule'
+    'naguModule',
+    'naguUrp'
   ])
   .config(function ($routeProvider) {
       $routeProvider
@@ -49,8 +50,28 @@ angular
           templateUrl: 'views/sbb/apply-user.html',
           controller: 'SbbApplyUserCtrl'
         })
+        .when('/jh/list', {
+          templateUrl: 'views/jh/list.html',
+          controller: 'JhListCtrl'
+        })
+        .when('/jh/detail/:jhbId', {
+          templateUrl: '../views/jh/detail.html',
+          controller: 'JhDetailCtrl'
+        })
+        .when('/jh/new', {
+          templateUrl: '../views/jh/detail.html',
+          controller: 'JhNewCtrl'
+        })
+        .when('/jh/item/detail/:itemId', {
+          templateUrl: 'views/jh/item-detail.html',
+          controller: 'JhItemDetailCtrl'
+        })
+        .when('/jh/item/new/:jhbId', {
+          templateUrl: 'views/jh/item-detail.html',
+          controller: 'JhItemNewCtrl'
+        })
         .otherwise({
-            templateUrl: 'views/sbb/list.html',
-            controller: 'SbbListCtrl'
+          templateUrl: 'views/jh/list.html',
+          controller: 'JhListCtrl'
         });
   });
