@@ -67,6 +67,29 @@ angular.module('appstoreApp')
 
     $scope.actions = {
       createOrSaveJhb: function(){
+        var bo = {
+          title: '出错了',
+          content:'xx不能为空',
+          autoClose: 2000,
+          position: {
+            x: 'center',
+            y: 'center'
+          }
+        };
+        var validate = function(field, name){
+          if(!$scope.jhb[field]){
+            bo.content = name + '不能为空';
+            new jBox('Notice', bo);
+            return false;
+          }
+          return true;
+        };
+
+        if(!validate('CglxId','采购类型') || !validate('Fzr','负责人')
+          || !validate('Lxdh','联想电话') || !validate('Jfly','经费来源')
+          || !validate('DwId','单位名称')){
+          return;
+        }
         $scope.loading.visible = true;
         naguUrpZc.CgJh.update($scope.jhb).then(function(jhb){
           $scope.loading.visible = false;

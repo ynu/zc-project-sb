@@ -55,7 +55,8 @@ angular.module('appstoreApp')
           $.each(xb001, function(i, bz){
             depts.push(bz.Id);
           });
-          $scope.jhb.DwId = _.intersection(depts, member.Depts)[0];
+          $scope.jhb.DwIds =  _.intersection(depts, member.Depts);
+          $scope.jhb.DwId = $scope.jhb.DwIds[0];
           $scope.loading.visible = false;
         });
       }
@@ -64,6 +65,30 @@ angular.module('appstoreApp')
 
     $scope.actions = {
       createOrSaveJhb: function(){
+        var bo = {
+          title: '出错了',
+          content:'xx不能为空',
+          autoClose: 2000,
+          position: {
+            x: 'center',
+            y: 'center'
+          }
+        };
+        var validate = function(field, name){
+          if(!$scope.jhb[field]){
+            bo.content = name + '不能为空';
+            new jBox('Notice', bo);
+            return false;
+          }
+          return true;
+        };
+
+        if(!validate('CglxId','采购类型') || !validate('Fzr','负责人')
+          || !validate('Lxdh','联想电话') || !validate('Jfly','经费来源')
+          || !validate('DwId','单位名称')){
+          return;
+        }
+
         $scope.loading.visible = true;
         naguUrpZc.CgJh.create($scope.jhb).then(function(jhb){
           $location.url('/jh/detail/'+jhb.Id);

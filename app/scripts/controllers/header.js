@@ -16,7 +16,8 @@ angular.module('appstoreApp')
           };
 
       $scope.isActive = function (curPath) {                            // 判断指定的path是不是当前path，主要用于ng-class给指定元素添加active类
-          return curPath == $location.path();
+          return $location.path().indexOf(curPath) == 0;
+          //return curPath == $location.path();
       };
 
       $scope.isHome = function () {
