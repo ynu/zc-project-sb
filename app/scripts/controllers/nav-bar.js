@@ -18,13 +18,14 @@ angular.module('appstoreApp')
               if (me.FigureUrls.length == 0 || me.FigureUrls[0] == '/Content/Images/logo.png')
                   me.FigureUrls[0] = 'http://ngapi.ynu.edu.cn/Content/Images/logo.png';
           }
-          naguMM.roles(me.Id, sbbService.AppId, sbbService.ReadKeys)
-              .then(function (roles) {
-                  if (roles.length == 0) $location.url('/sbb/apply-user');
-                  else if (roles[sbbService.Roles.SQZ]) {
-                      alert('已申请了，请等待');
-                  }
-          });
+        // 以下提供用户自助申请的功能
+          //naguMM.roles(me.Id, sbbService.AppId, sbbService.ReadKeys)
+          //    .then(function (roles) {
+          //        if (roles.length == 0) $location.url('/sbb/apply-user');
+          //        else if (roles[sbbService.Roles.SQZ]) {
+          //            alert('已申请了，请等待');
+          //        }
+          //});
       })
 
 

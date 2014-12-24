@@ -56,7 +56,6 @@ angular.module('appstoreApp')
             depts.push(bz.Id);
           });
           $scope.jhb.DwIds =  _.intersection(depts, member.Depts);
-          $scope.jhb.DwId = $scope.jhb.DwIds[0];
           $scope.loading.visible = false;
         });
       }
@@ -93,6 +92,8 @@ angular.module('appstoreApp')
         naguUrpZc.CgJh.create($scope.jhb).then(function(jhb){
           $location.url('/jh/detail/'+jhb.Id);
           $scope.loading.visible = false;
+        }, function(result){
+          alert(result.msg);
         });
       }
     }

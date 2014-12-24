@@ -18,11 +18,15 @@ angular.module('appstoreApp')
        */
       ZcGlyId: '47a3b0cc-6d49-43df-ba60-a88be1b43803',
 
+      /**
+       * 采购管理员RoleId
+       */
+      CgGlyId: '6f115582-0fd5-4c50-b6a6-20668ceeef03',
+
       /*
       * 判断me是否是资产管理员
        */
       isZcGly: function(me){
-        return true;
         if(me.TypeFss){
           return $.grep(me.TypeFss, function(fs){
             return fs.Object.ConceptId == '47a3b0cc-6d49-43df-ba60-a88be1b43803'

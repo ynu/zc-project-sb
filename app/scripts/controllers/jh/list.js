@@ -8,7 +8,7 @@
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('JhListCtrl', function ($scope,naguUrpZc, siteConfig, naguMM,$q, naguBz, $location,$rootScope) {
+  .controller('JhListCtrl', function ($scope,naguUrpZc, siteConfig, naguMM,$q, naguBz, $location,$rootScope, naguRole) {
     $rootScope.breadcrumb = [
       {
         name: '云Urp',
@@ -25,25 +25,34 @@ angular.module('appstoreApp')
 
     $scope.user = {
       // 是否是资产管理员
-      isZcgly: false
+      isZcGly: false
     };
 
     var dtdMe = naguMM.getMe();
     dtdMe.then(function(me){
       if(me.Id){
-        if(siteConfig.isZcGly(me)){       // 有权限
-          $scope.user.isZcGly = true;
-          naguUrpZc.CgJh.list(siteConfig.AppId).then(function(jhbs){
-            $scope.jhbList = jhbs;
-          });
-        }
-        else{
-          alert('无权限');
-        }
+        naguMM.roles(siteConfig.AppId).then(function(roles){
+          $scope.user.isZcGly = _.filter(roles, function(r){
+              return r.ConceptId == siteConfig.ZcGlyId;
+            }).length> 0;
+          $scope.user.isCgGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.CgGlyId;
+          }).length>0;
+          if($scope.user.isZcGly || $scope.user.isCgGly){       // 有权限
+            naguUrpZc.CgJh.list(siteConfig.AppId).then(function(jhbs){
+              $scope.jhbList = jhbs;
+            });
+          } else{
+            alert('无权限');
+          }
+        });
+
       } else{
         window.location = 'http://members.apps.ynu.edu.cn/#/user/login?returnUrl='+ encodeURIComponent($location.absUrl());
       }
     });
+
+
 
     var dtdXb001 = naguBz.Ynu.XB001.getBzItems2();
     dtdXb001.then(function(xb001){
@@ -91,6 +100,9 @@ angular.module('appstoreApp')
         } else {
           return false;
         }
+      },
+      canNew: function(){
+        return $scope.user.isZcGly;
       }
     };
   });
