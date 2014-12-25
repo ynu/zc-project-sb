@@ -34,10 +34,10 @@
             <td>{{jhb.Nd | date: 'yyyy'}}</td>
             <td>{{xb010[jhb.CglxId].Name}}</td>
             <td>
-              <span class="label label-sm label-warning" ng-if="!jhb.IsSubmit">未提交</span>
-              <span class="label label-sm label-success" ng-if="jhb.IsSubmit">已提交</span>
-              <span class="label label-sm label-success" ng-if="jhb.IsSubmit && !jhb.IsApproved">未通过</span>
-              <span class="label label-sm label-success" ng-if="jhb.IsSubmit && jhb.IsApproved">已通过</span>
+              <span class="label label-sm label-warning" ng-if="!jhb.IsSubmitted">未提交</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && !jhb.Msg">已提交，等待审核</span>
+              <span class="label label-sm" ng-if="!jhb.IsSubmitted && !jhb.IsApproved && jhb.Msg">未通过</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && jhb.IsApproved">已通过</span>
               <div ng-if="jhb.Msg"><span class="label label-info">{{jhb.Msg}}</span></div>
             </td>
             <td>
@@ -49,7 +49,19 @@
                 <button class="btn btn-xs btn-success" title="提交计划表"
                         ng-click="actions.submit(jhb);"
                         ng-if="controls.canSubmit(jhb);">
+                  <i class="ace-icon fa fa-upload bigger-120"></i>
+                </button>
+
+                <button class="btn btn-xs btn-success" title="通过计划表"
+                        ng-click="actions.approve(jhb);"
+                        ng-if="controls.canApproveOrReject(jhb);">
                   <i class="ace-icon fa fa-check bigger-120"></i>
+                </button>
+
+                <button class="btn btn-xs btn-danger" title="驳回计划表"
+                        ng-click="actions.reject(jhb);"
+                        ng-if="controls.canApproveOrReject(jhb);">
+                  <i class="ace-icon fa fa-close bigger-120"></i>
                 </button>
 
                 <button class="btn btn-xs btn-danger" title="删除计划表"

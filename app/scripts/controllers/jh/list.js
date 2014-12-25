@@ -80,6 +80,18 @@ angular.module('appstoreApp')
             $scope.loading.visible = false;
           })
         }
+      },
+      submit: function(jhb){
+        if (confirm('确实要提交采购计划表吗？')) {
+          $scope.loading.visible = true;
+          naguUrpZc.CgJh.submit(jhb.Id, siteConfig.AppId).then(function () {
+            jhb.IsSubmitted = true;
+            $scope.loading.visible = false;
+          }, function(result){
+            alert(result.msg);
+            $scope.loading.visible = false;
+          });
+        }
       }
     };
 
@@ -91,8 +103,9 @@ angular.module('appstoreApp')
           return false;
         }
       },
-      canApproved: function(jhb){
-        return false;
+      canApproveOrReject: function(jhb){
+        if($scope.user.isCgGly && jhb.IsSubmitted) return true;
+        else return false;
       },
       canDelete: function(jhb){
         if($scope.user.isZcGly && !jhb.IsSubmitted){
