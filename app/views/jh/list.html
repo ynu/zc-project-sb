@@ -35,7 +35,7 @@
             <td>{{xb010[jhb.CglxId].Name}}</td>
             <td>
               <span class="label label-sm label-warning" ng-if="!jhb.IsSubmitted">未提交</span>
-              <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && !jhb.Msg">已提交，等待审核</span>
+              <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && !jhb.Msg && !jhb.IsApproved">已提交，等待审核</span>
               <span class="label label-sm" ng-if="!jhb.IsSubmitted && !jhb.IsApproved && jhb.Msg">未通过</span>
               <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && jhb.IsApproved">已通过</span>
               <div ng-if="jhb.Msg"><span class="label label-info">{{jhb.Msg}}</span></div>
