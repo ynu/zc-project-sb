@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4ebe821-c922-496b-be27-28946eec768e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/detail.html" afterPath="$PROJECT_DIR$/app/views/jh/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/item-detail.html" afterPath="$PROJECT_DIR$/app/views/jh/item-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zc-project-sb.iws" />
@@ -77,20 +77,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/jh/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.285714" vertical-offset="460" max-vertical-offset="1843">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5963964" vertical-offset="220" max-vertical-offset="1634">
+              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#2;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#5;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#div#6;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#7;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#8;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
                 <element signature="n#thead#0;n#table#0;n#div#1;n#div#2;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -150,13 +153,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item-detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="item-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/jh/item-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28108108" vertical-offset="357" max-vertical-offset="912">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.5714285" vertical-offset="4" max-vertical-offset="760">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
@@ -205,10 +209,10 @@
         <option value="$PROJECT_DIR$/app/views/jh/list.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/views/jh/detail.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
         <option value="$PROJECT_DIR$/app/views/jh/item-detail.html" />
+        <option value="$PROJECT_DIR$/app/views/jh/detail.html" />
       </list>
     </option>
   </component>
@@ -674,7 +678,13 @@
       <option name="project" value="LOCAL" />
       <updated>1419575377190</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="item修改或创建时的验证">
+      <created>1419575894564</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1419575894564</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -729,7 +739,8 @@
     <MESSAGE value="完成jh/detail 的修改" />
     <MESSAGE value="完成jh/item/new 的修改" />
     <MESSAGE value="完成jh/item/detail 的修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成jh/item/detail 的修改" />
+    <MESSAGE value="item修改或创建时的验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="item修改或创建时的验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,24 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jh/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.285714" vertical-offset="460" max-vertical-offset="1843">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#thead#0;n#table#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="665">
@@ -1155,16 +1148,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jh/item-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28108108" vertical-offset="357" max-vertical-offset="912">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.5714285" vertical-offset="4" max-vertical-offset="760">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jh/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5963964" vertical-offset="220" max-vertical-offset="1634">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#thead#0;n#table#0;n#div#1;n#div#2;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
