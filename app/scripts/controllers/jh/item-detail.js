@@ -10,13 +10,10 @@
 angular.module('appstoreApp')
   .controller('JhItemDetailCtrl', function ($scope,$rootScope, $routeParams, naguBz, naguMM, naguUrpZc, siteConfig) {
     $scope.item = {
-      Id: $routeParams['itemId']
+      Id: $routeParams['itemId'],
+      JhbId: $routeParams['jhbId']
     };
     $rootScope.breadcrumb = [
-      {
-        name: '云Urp',
-        href: '#'
-      },
       {
         name: '云南大学',
         href:'#'
@@ -27,7 +24,7 @@ angular.module('appstoreApp')
       },
       {
         name: '采购计划表',
-        href:'#/jh/detail/'+$scope.item.jhbId
+        href:'#/jh/detail/'+$scope.item.JhbId
       },
       {
         name: '添加计划采购项目'
@@ -36,6 +33,7 @@ angular.module('appstoreApp')
 
     var dtdXb009 = naguBz.Ynu.XB009.getBzItems2();
     dtdXb009.then(function(bzs){
+      $scope.xb009 = bzs;
       $scope.getSubHwlx = function(parent){
         if(!parent) parent = naguBz.Ynu.XB009.Id;
         return _.filter(bzs, function(bz){
@@ -44,11 +42,33 @@ angular.module('appstoreApp')
       }
     });
 
+    var dtdJhb = naguUrpZc.CgJh.get($scope.item.JhbId, siteConfig.AppId);
+    dtdJhb.then(function(jhb){
+      $scope.jhb = jhb;
+    }, function(result){
+      alert(result.msg);
+    });
+
     var dtdMe = naguMM.getMe();
     var dtdGetItem = naguUrpZc.CgJh.getItem($scope.item.Id, siteConfig.AppId);
 
     dtdMe.then(function(me){
       if(me.Id){
+        $scope.user = me;
+        var dtdRoles = naguMM.roles(siteConfig.AppId);
+        dtdRoles.then(function(roles){
+          $scope.user.isZcGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.ZcGlyId;
+          }).length> 0;
+          $scope.user.isCgGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.CgGlyId;
+          }).length>0;
+          if($scope.user.isZcGly || $scope.user.isCgGly){       // 有权限
+          } else{
+            alert('无权限');
+          }
+        });
+
         dtdGetItem.then(function(item){
           $scope.item = item;
         });

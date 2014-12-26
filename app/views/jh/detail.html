@@ -107,7 +107,7 @@
 
       <div class="form-group">
         <label class="col-sm-2 control-label" >备注</label>
-        <div class="col-sm-10"  ng-switch="user.isZcGly &&　!jhb.IsSubmitted">
+        <div class="col-sm-10"  ng-switch="user.isZcGly && !jhb.IsSubmitted">
           <input class="form-control"  placeholder=""
                  ng-model="jhb.Bz" ng-switch-when="true">
           <span class="help-block" ng-switch-default=""><b>{{jhb.Bz}}</b></span>
@@ -154,7 +154,7 @@
         <td>{{item.Jhdd}}</td>
         <td>
           <div class="btn-group">
-            <a class="btn btn-xs btn-primary" href="#/jh/detail/{{jhb.Id}}" title="查看采购项目">
+            <a class="btn btn-xs btn-primary" href="#/jh/item/detail/{{item.Id}}/{{jhb.Id}}" title="查看采购项目">
               <i class="ace-icon fa fa-search-plus bigger-120"></i>
             </a>
 

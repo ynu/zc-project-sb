@@ -62,7 +62,7 @@ angular
           templateUrl: '../views/jh/detail.html',
           controller: 'JhNewCtrl'
         })
-        .when('/jh/item/detail/:itemId', {
+        .when('/jh/item/detail/:itemId/:jhbId', {
           templateUrl: 'views/jh/item-detail.html',
           controller: 'JhItemDetailCtrl'
         })
