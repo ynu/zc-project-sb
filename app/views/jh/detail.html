@@ -32,30 +32,32 @@
                     ng-repeat="dw in jhb.DwIds track by $index"
               ng-model="jhb.DwId">{{xb001[dw].Name}}</option>
           </select>
-          <span ng-if="jhb.Id" class="help-block">{{xb001[jhb.DwId].Name}}</span>
+          <span ng-if="jhb.Id" class="help-block"><b>{{xb001[jhb.DwId].Name}}</b></span>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-if="jhb.Djrq">
         <label class="col-sm-2 control-label" >登记日期</label>
         <div class="col-sm-10">
           <input class="form-control"  placeholder="填入日期，格式如：“2015-01-03”"
                  ng-model="jhb.Djrq">
+          <span class="help-block"><b>{{jhb.Djrq | date: 'yyyy-MM-dd'}}</b></span>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" ng-if="jhb.Id">
         <label class="col-sm-2 control-label" >项目编号</label>
         <div class="col-sm-10">
-          <input class="form-control"  placeholder=""
-                 ng-model="jhb.Xmbh">
+          <!--<input class="form-control"  placeholder=""-->
+                 <!--ng-model="jhb.Xmbh">-->
+          <span class="help-block"><b>{{jhb.Id}}</b></span>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-sm-2 control-label" >采购类型</label>
         <div class="col-sm-10">
-          <select ng-model="jhb.CglxId" >
+          <select ng-model="jhb.CglxId" ng-if="user.isZcGly">
             <option value="">请选择采购类型</option>
             <optgroup label="G-货物">
               <option value="33ef1149-98a5-4e64-9324-68968f589c9c">国产</option>
@@ -64,6 +66,7 @@
             <option value="08ad9497-25fb-4870-83fc-f8360beccb34">C-工程</option>
             <option value="da7e2092-1873-4c5e-b3bb-affc24a49211">S-服务</option>
           </select>
+          <span class="help-block" ng-if="!user.isZcGly"><b>{{xb010[jhb.CglxId].Name}}</b></span>
         </div>
       </div>
 
@@ -72,7 +75,8 @@
         <div class="col-sm-10" >
           <input class="form-control"  placeholder=""
                  ng-model="jhb.Fzr"
-            >
+                 ng-if="user.isZcGly" >
+          <span class="help-block" ng-if="!user.isZcGly"><b>{{jhb.Fzr}}</b></span>
         </div>
       </div>
 
@@ -80,15 +84,24 @@
         <label class="col-sm-2 control-label" >联系电话</label>
         <div class="col-sm-10">
           <input class="form-control"  placeholder=""
-                 ng-model="jhb.Lxdh" ng-required>
+                 ng-model="jhb.Lxdh" ng-if="user.isZcGly">
+          <span class="help-block" ng-if="!user.isZcGly"><b>{{jhb.Lxdh}}</b></span>
+        </div>
+      </div>
+
+      <div class="form-group" ng-if="jhb.Id">
+        <label class="col-sm-2 control-label" >预算总额</label>
+        <div class="col-sm-10">
+          <span class="help-block"><b>{{controls.getYsze(jhb) | currency: '￥'}}</b></span>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-sm-2 control-label" >经费来源</label>
-        <div class="col-sm-10">
+        <div class="col-sm-10" ng-switch="user.isZcGly">
           <input class="form-control"  placeholder=""
-                 ng-model="jhb.Jfly">
+                 ng-model="jhb.Jfly" ng-switch-when="true">
+          <span class="help-block" ng-switch-when="false"><b>{{jhb.Jfly}}</b></span>
         </div>
       </div>
 
@@ -96,14 +109,15 @@
         <label class="col-sm-2 control-label" >备注</label>
         <div class="col-sm-10">
           <input class="form-control"  placeholder=""
-                 ng-model="jhb.Bz">
+                 ng-model="jhb.Bz" ng-if="user.isZcGly">
+          <span class="help-block" ng-if="!user.isZcGly"><b>{{jhb.Bz}}</b></span>
         </div>
       </div>
 
     </form>
   </div>
   <div class="panel-footer">
-    <button class="btn btn-primary" ng-click="actions.createOrSaveJhb();">确定</button>
+    <button class="btn btn-primary" ng-click="actions.createOrSaveJhb();" ng-if="user.isZcGly">保存</button>
   </div>
 </div>
 
@@ -144,7 +158,8 @@
               <i class="ace-icon fa fa-search-plus bigger-120"></i>
             </a>
 
-            <button class="btn btn-xs btn-danger" title="删除计划采购项目" ng-click="actions.deleteItem(item);">
+            <button class="btn btn-xs btn-danger" title="删除计划采购项目"
+                    ng-click="actions.deleteItem(item);" ng-if="user.isZcGly">
               <i class="ace-icon fa fa-trash-o bigger-120"></i>
             </button>
 
@@ -156,7 +171,7 @@
     </table>
   </div>
   <div class="panel-footer">
-    <a class="btn btn-primary" href="#/jh/item/new/{{jhb.Id}}">添加项目</a>
+    <a class="btn btn-primary" href="#/jh/item/new/{{jhb.Id}}"  ng-if="user.isZcGly">添加项目</a>
   </div>
 </div>
 

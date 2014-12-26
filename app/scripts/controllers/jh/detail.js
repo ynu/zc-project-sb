@@ -11,10 +11,6 @@ angular.module('appstoreApp')
   .controller('JhDetailCtrl', function ($scope, naguMM, siteConfig, naguUrpMM,naguBz, $q, naguUrpZc,$routeParams, $rootScope) {
     $rootScope.breadcrumb = [
       {
-        name: '云Urp',
-        href: '#'
-      },
-      {
         name: '云南大学',
         href:'#'
       },
@@ -31,13 +27,28 @@ angular.module('appstoreApp')
 
     $scope.loading.visible = true;
 
+
+
     var dtdMe = naguMM.getMe();
     dtdMe.then(function(me){
       if(me.Id){
         $scope.me = me;
+        $scope.user = me;
+        var dtdRoles = naguMM.roles(siteConfig.AppId);
+        dtdRoles.then(function(roles){
+          $scope.user.isZcGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.ZcGlyId;
+          }).length> 0;
+          $scope.user.isCgGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.CgGlyId;
+          }).length>0;
+          if($scope.user.isZcGly || $scope.user.isCgGly){       // 有权限
+          } else{
+            alert('无权限');
+          }
+        });
 
         var dtdJhb = naguUrpZc.CgJh.get(jhbId, siteConfig.AppId);
-
         dtdJhb.then(function(jhb){
           $scope.jhb = jhb;
         }, function(result){
@@ -53,17 +64,35 @@ angular.module('appstoreApp')
         dtdXb009.then(function(xb009){
           $scope.xb009 = xb009;
         });
+
+        var dtdXb010 = naguBz.Ynu.XB010.getBzItems2();
+        dtdXb010.then(function(xb010){
+          $scope.xb010 = xb010;
+        });
+
         var dtdMember = naguUrpMM.getMember(me.Id, siteConfig.AppId);
         dtdMember.then(function (member) {
           $scope.member = member;
         });
 
-        $q.all([dtdMember, dtdXb001, dtdJhb]).then(function(datas){
+        $q.all([dtdMember, dtdXb001, dtdJhb, dtdRoles, dtdXb010]).then(function(datas){
           $scope.loading.visible = false;
         });
       }
     });
 
+
+    $scope.controls = {
+      getYsze: function(jhb){
+        var amount = .0;
+        if(jhb.Items){
+          _.each(jhb.Items, function(item){
+            amount += item.Sl * item.Ysdj;
+          });
+        }
+        return amount;
+      }
+    };
 
     $scope.actions = {
       createOrSaveJhb: function(){
@@ -110,5 +139,5 @@ angular.module('appstoreApp')
         }
 
       }
-    }
+    };
   });
