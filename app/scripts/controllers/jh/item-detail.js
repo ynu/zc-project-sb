@@ -8,7 +8,8 @@
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('JhItemDetailCtrl', function ($scope,$rootScope, $routeParams, naguBz, naguMM, naguUrpZc, siteConfig) {
+  .controller('JhItemDetailCtrl', function ($scope,$rootScope, $routeParams, naguBz, naguMM, naguUrpZc, siteConfig,$q) {
+    $scope.loading.visible = true;
     $scope.item = {
       Id: $routeParams['itemId'],
       JhbId: $routeParams['jhbId']
@@ -45,13 +46,14 @@ angular.module('appstoreApp')
     var dtdJhb = naguUrpZc.CgJh.get($scope.item.JhbId, siteConfig.AppId);
     dtdJhb.then(function(jhb){
       $scope.jhb = jhb;
+      $scope.item = _.find(jhb.Items, function(item){
+        return item.Id == $scope.item.Id;
+      });
     }, function(result){
       alert(result.msg);
     });
 
     var dtdMe = naguMM.getMe();
-    var dtdGetItem = naguUrpZc.CgJh.getItem($scope.item.Id, siteConfig.AppId);
-
     dtdMe.then(function(me){
       if(me.Id){
         $scope.user = me;
@@ -68,11 +70,11 @@ angular.module('appstoreApp')
             alert('无权限');
           }
         });
-
-        dtdGetItem.then(function(item){
-          $scope.item = item;
-        });
       }
+    });
+
+    $q.all([dtdXb009, dtdMe, dtdJhb]).then(function(){
+      $scope.loading.visible = false;
     });
 
   });

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4ebe821-c922-496b-be27-28946eec768e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/detail.html" afterPath="$PROJECT_DIR$/app/views/jh/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/item-detail.html" afterPath="$PROJECT_DIR$/app/views/jh/item-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zc-project-sb.iws" />
@@ -122,13 +119,16 @@
       <file leaf-file-name="item-detail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57461405" vertical-offset="292" max-vertical-offset="893">
-              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.70668954" vertical-offset="63" max-vertical-offset="665">
+              <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
               <folding>
-                <element signature="e#434#691#0" expanded="false" />
-                <element signature="e#776#1009#0" expanded="false" />
-                <element signature="e#1116#1147#0" expanded="false" />
-                <element signature="e#1477#1892#0" expanded="false" />
+                <element signature="e#366#442#0" expanded="false" />
+                <element signature="e#472#729#0" expanded="false" />
+                <element signature="e#814#1047#0" expanded="false" />
+                <element signature="e#1154#1291#0" expanded="false" />
+                <element signature="e#1404#1972#0" expanded="false" />
+                <element signature="e#1541#1956#0" expanded="false" />
+                <element signature="e#2033#2078#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -152,8 +152,8 @@
       <file leaf-file-name="item-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/jh/item-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2857143" vertical-offset="59" max-vertical-offset="684">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state vertical-scroll-proportion="-6.035714" vertical-offset="59" max-vertical-offset="703">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
@@ -206,8 +206,8 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
-        <option value="$PROJECT_DIR$/app/views/jh/item-detail.html" />
         <option value="$PROJECT_DIR$/app/views/jh/detail.html" />
+        <option value="$PROJECT_DIR$/app/views/jh/item-detail.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
       </list>
     </option>
@@ -662,7 +662,13 @@
       <option name="project" value="LOCAL" />
       <updated>1419559924479</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成jh/item/new 的修改">
+      <created>1419565712474</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1419565712474</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -715,7 +721,8 @@
     <MESSAGE value="添加首页" />
     <MESSAGE value="修改页脚内容" />
     <MESSAGE value="完成jh/detail 的修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成jh/detail 的修改" />
+    <MESSAGE value="完成jh/item/new 的修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成jh/item/new 的修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1105,23 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jh/item-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2857143" vertical-offset="59" max-vertical-offset="684">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="1064">
@@ -1139,15 +1129,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jh/item-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.035714" vertical-offset="59" max-vertical-offset="703">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57461405" vertical-offset="292" max-vertical-offset="893">
-          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.70668954" vertical-offset="63" max-vertical-offset="665">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
           <folding>
-            <element signature="e#434#691#0" expanded="false" />
-            <element signature="e#776#1009#0" expanded="false" />
-            <element signature="e#1116#1147#0" expanded="false" />
-            <element signature="e#1477#1892#0" expanded="false" />
+            <element signature="e#366#442#0" expanded="false" />
+            <element signature="e#472#729#0" expanded="false" />
+            <element signature="e#814#1047#0" expanded="false" />
+            <element signature="e#1154#1291#0" expanded="false" />
+            <element signature="e#1404#1972#0" expanded="false" />
+            <element signature="e#1541#1956#0" expanded="false" />
+            <element signature="e#2033#2078#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -80,7 +80,8 @@
     </div>
   </div>
   <div class="panel-footer">
-    <button class="btn btn-primary" ng-click="actions.createOrSaveAndReturn();">保存并返回</button>
+    <button class="btn btn-primary" ng-click="actions.createOrSaveAndReturn();"
+      ng-if="!jhb.IsApproved && jhb.Creator == user.ConceptId">保存并返回</button>
     <button class="btn btn-primary" ng-click="actions.createOrSave();"
       ng-if="!item.Id">保存并继续</button>
   </div>
