@@ -688,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1419576269199</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1226">
+      <created>1419587173502</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1419587173502</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -745,7 +751,8 @@
     <MESSAGE value="完成jh/item/detail 的修改" />
     <MESSAGE value="item修改或创建时的验证" />
     <MESSAGE value="调整item和jhb创建页面控件的宽度" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整item和jhb创建页面控件的宽度" />
+    <MESSAGE value="1226" />
+    <option name="LAST_COMMIT_MESSAGE" value="1226" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
