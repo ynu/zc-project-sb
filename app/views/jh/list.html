@@ -38,7 +38,7 @@
               <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && !jhb.Msg && !jhb.IsApproved">已提交，等待审核</span>
               <span class="label label-sm label-warning" ng-if="!jhb.IsSubmitted && jhb.Msg">未通过</span>
               <span class="label label-sm label-success" ng-if="jhb.IsSubmitted && jhb.IsApproved">已通过</span>
-              <div ng-if="jhb.Msg">驳回原因：<span class="label label-default">{{jhb.Msg}}</span></div>
+              <div ng-if="jhb.Msg"><span class="label label-default">原因：{{jhb.Msg}}</span></div>
             </td>
             <td>
               <div class="btn-group">
