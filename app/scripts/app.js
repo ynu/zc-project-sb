@@ -71,7 +71,7 @@ angular
           controller: 'JhItemNewCtrl'
         })
         .otherwise({
-          templateUrl: 'views/jh/list.html',
-          controller: 'JhListCtrl'
+          templateUrl: 'views/main.html',
+          controller: 'MainCtrl'
         });
   });

@@ -104,6 +104,21 @@ angular.module('appstoreApp')
             $scope.loading.visible = false;
           });
         }
+      },
+      reject: function(jhb){
+        var msg = prompt('请输入驳回理由');
+        if (msg) {
+          $scope.loading.visible = true;
+          naguUrpZc.CgJh.reject(jhb.Id, siteConfig.AppId, msg).then(function () {
+            $scope.jhbList = _.filter($scope.jhbList, function(b){
+              return jhb.Id != b.Id;
+            });
+            $scope.loading.visible = false;
+          }, function(result){
+            alert(result.msg);
+            $scope.loading.visible = false;
+          });
+        }
       }
     };
 
