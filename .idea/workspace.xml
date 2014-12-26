@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4ebe821-c922-496b-be27-28946eec768e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/detail.html" afterPath="$PROJECT_DIR$/app/views/jh/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/item-detail.html" afterPath="$PROJECT_DIR$/app/views/jh/item-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zc-project-sb.iws" />
@@ -80,8 +78,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/jh/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5963964" vertical-offset="220" max-vertical-offset="1634">
-              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.117117114" vertical-offset="220" max-vertical-offset="1634">
+              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
@@ -684,7 +682,13 @@
       <option name="project" value="LOCAL" />
       <updated>1419575894564</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="调整item和jhb创建页面控件的宽度">
+      <created>1419576269199</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1419576269199</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -740,7 +744,8 @@
     <MESSAGE value="完成jh/item/new 的修改" />
     <MESSAGE value="完成jh/item/detail 的修改" />
     <MESSAGE value="item修改或创建时的验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="item修改或创建时的验证" />
+    <MESSAGE value="调整item和jhb创建页面控件的宽度" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整item和jhb创建页面控件的宽度" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,8 +1170,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jh/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5963964" vertical-offset="220" max-vertical-offset="1634">
-          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.117117114" vertical-offset="220" max-vertical-offset="1634">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
