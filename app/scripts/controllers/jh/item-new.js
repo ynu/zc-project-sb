@@ -95,12 +95,12 @@ angular.module('appstoreApp')
 
       // 保存前进行验证
       validateBeforeSave: function(){
-        if(!$scope.controls.validate('HwlxId',$scope.item.HwlxId)
-          || !$scope.controls.validate('Tymc',$scope.item.Tymc)
-          || !$scope.controls.validate('Sl',$scope.item.Sl)
-          || !$scope.controls.validate('Jldw',$scope.item.Jldw)
-          || !$scope.controls.validate('Ysdj',$scope.item.Ysdj)
-          || !$scope.controls.validate('Jhdd',$scope.item.Jhdd))
+        if(!$scope.controls.validate('HwlxId','货物类型')
+          || !$scope.controls.validate('Tymc','通用名称')
+          || !$scope.controls.validate('Sl','数量')
+          || !$scope.controls.validate('Jldw','计量单位')
+          || !$scope.controls.validate('Ysdj','预算单价')
+          || !$scope.controls.validate('Jhdd','交货地点'))
           return false;
         else return true;
       }

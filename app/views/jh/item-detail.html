@@ -81,9 +81,9 @@
   </div>
   <div class="panel-footer">
     <button class="btn btn-primary" ng-click="actions.createOrSaveAndReturn();"
-      ng-if="!jhb.IsApproved && jhb.Creator == user.ConceptId">保存并返回</button>
+      ng-if="!jhb.IsApproved && jhb.Creator == user.Id">保存并返回</button>
     <button class="btn btn-primary" ng-click="actions.createOrSave();"
-      ng-if="!item.Id">保存并继续</button>
+      ng-if="!item.Id && jhb.Creator == user.Id">保存并继续</button>
   </div>
 </div>
 
