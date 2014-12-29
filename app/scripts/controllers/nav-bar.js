@@ -9,7 +9,7 @@
  */
 angular.module('appstoreApp')
   .controller('NavBarCtrl', function ($scope, $q, $rootScope, $location, naguMM,sbbService) {
-      $scope.version = '1.3.0';
+      $scope.version = '1.4.0';
       $scope.me = {};
 
       naguMM.getMe().then(function (me) {
