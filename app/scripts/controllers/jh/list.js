@@ -57,11 +57,15 @@ angular.module('appstoreApp')
     var dtdXb001 = naguBz.Ynu.XB001.getBzItems2();
     dtdXb001.then(function(xb001){
       $scope.xb001 = xb001;
+    },function(result){
+      alert(result.msg);
     });
 
     var dtdXb010 = naguBz.Ynu.XB010.getBzItems2();
     dtdXb010.then(function(xb010){
       $scope.xb010 = xb010;
+    },function(result){
+      alert(result.msg);
     });
 
     $scope.loading.visible = true;

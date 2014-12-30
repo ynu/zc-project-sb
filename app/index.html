@@ -139,7 +139,7 @@
                     </li>
 
                     <li class="light-login" ng-if="me && !me.Id">
-                        <a href="#/login?returnUrl={{returnUrl}}">
+                        <a href="http://members.apps.ynu.edu.cn/#/user/login?returnUrl={{returnUrl}}">
                             <i class="ace-icon fa fa-user"></i>
                             登录
                         </a>
@@ -287,6 +287,17 @@
     <div class="nagu-loading-mask" ng-if="loading.visible"></div>
 
     <!-- build:js(.) scripts/oldieshim.js -->
+    <script type="text/javascript">
+      //delete this variable for defaults
+      this.detectOptions = {
+        versions: {i:9,f:3.6,c:15,o:10.6,s:4,n:10}, //Set versions. Letter is first letter of browser name
+        language: 'zh', //Force the language. Leave off to let browser select
+        url: 'http://browser-update.org/%s/update.html', //url for the link. %s resolves to language code.
+        debug: false //set to true to always see bar
+      };
+    </script>
+    <script src="http://cdn.ynu.edu.cn/lib/detect.js"></script>
+
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
@@ -309,6 +320,9 @@
     <script src="bower_components/pickadate/lib/picker.time.js"></script>
     <script src="bower_components/angular-validation/dist/angular-validation.js"></script>
     <script src="bower_components/angular-bootstrap-show-errors/src/showErrors.js"></script>
+    <script src="bower_components/br-validations/releases/br-validations.js"></script>
+    <script src="bower_components/string-mask/src/string-mask.js"></script>
+    <script src="bower_components/angular-input-masks/releases/masks.min.js"></script>
     <!-- endbower -->
 
     <script src="../bower_components/pickadate/lib/translations/zh_CN.js"></script>

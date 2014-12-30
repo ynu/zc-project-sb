@@ -92,9 +92,22 @@ angular.module('appstoreApp')
         }
         return true;
       },
-
       // 保存前进行验证
       validateBeforeSave: function(){
+        var hjje = $scope.item.Sl * $scope.item.Ysdj;
+        if(isNaN(hjje) || hjje <= 0) {
+          new jBox('Notice', {
+            title: '出错了',
+            content:'数量和预算单价不能为0',
+            autoClose: 2000,
+            position: {
+              x: 'center',
+              y: 'center'
+            }
+          });
+          return false;
+        }
+
         if(!$scope.controls.validate('HwlxId','货物类型')
           || !$scope.controls.validate('Tymc','通用名称')
           || !$scope.controls.validate('Sl','数量')

@@ -18,7 +18,6 @@
           <thead>
           <tr>
             <th>登记日期</th>
-            <th>项目编号</th>
             <th>单位名称</th>
             <th>年度</th>
             <th>采购类型</th>
@@ -29,7 +28,6 @@
           <tbody>
           <tr ng-repeat="jhb in jhbList track by $index">
             <td><span>{{jhb.Djrq | date: 'yyyy-MM-dd'}}</span></td>
-            <td>{{jhb.Xmbh}}</td>
             <td>{{xb001[jhb.DwId].Name}}</td>
             <td>{{jhb.Nd | date: 'yyyy'}}</td>
             <td>{{xb010[jhb.CglxId].Name}}</td>

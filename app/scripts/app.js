@@ -18,7 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'naguModule',
-    'naguUrp'
+    'naguUrp',
+    'ui.utils.masks'
   ])
   .config(function ($routeProvider) {
       $routeProvider
