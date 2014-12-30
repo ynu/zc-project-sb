@@ -27,7 +27,7 @@ angular.module('appstoreApp')
           //        }
           //});
       })
-
+    $scope.returnUrl = encodeURIComponent($location.absUrl());
 
       $scope.actions = {
           logout: function () {

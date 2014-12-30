@@ -37,7 +37,22 @@ angular.module('appstoreApp')
     naguMM.getMe().then(function(me){
       if(me.Id){
         $scope.me = me;
+        $scope.user = me;
         $scope.jhb.ZcglyId = me.Id;
+
+        var dtdRoles = naguMM.roles(siteConfig.AppId);
+        dtdRoles.then(function(roles){
+          $scope.user.isZcGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.ZcGlyId;
+          }).length> 0;
+          $scope.user.isCgGly = _.filter(roles, function(r){
+            return r.ConceptId == siteConfig.CgGlyId;
+          }).length>0;
+          if($scope.user.isZcGly || $scope.user.isCgGly){       // 有权限
+          } else{
+            alert('无权限');
+          }
+        });
 
         var memberPromise = naguUrpMM.getMember(me.Id, siteConfig.AppId);
         memberPromise.then(function (member) {

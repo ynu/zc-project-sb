@@ -122,6 +122,14 @@ angular.module('appstoreApp')
         $scope.loading.visible = true;
         naguUrpZc.CgJh.update($scope.jhb).then(function(jhb){
           $scope.loading.visible = false;
+          new jBox('Notice', {
+            content: '修改成功',
+            autoClose: 1000,
+            position: {
+              x: 'center',
+              y: 'center'
+            }
+          });
         },function(result){
           alert(result.msg);
           $scope.loading.visible = false;
