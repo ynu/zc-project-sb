@@ -8,8 +8,8 @@
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('JhItemNewCtrl', function ($scope,naguUrpZc,naguMM,siteConfig,$routeParams,naguBz, $location, $rootScope) {
-
+  .controller('JhItemNewCtrl', function ($scope,naguUrpZc,naguMM,siteConfig,$routeParams,naguBz, $location, $rootScope, $q) {
+    $scope.loading.visible = true;
 
     $scope.item = {
       JhbId: $routeParams['jhbId'],
@@ -62,6 +62,7 @@ angular.module('appstoreApp')
           } else{
             alert('无权限');
           }
+          $scope.loading.visible = false;
         });
       }
     });
@@ -72,6 +73,7 @@ angular.module('appstoreApp')
     }, function(result){
       alert(result.msg);
     });
+
 
     $scope.controls = {
       // 验证字段值不为空，出错时显示提示

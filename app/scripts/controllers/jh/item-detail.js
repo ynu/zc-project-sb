@@ -8,7 +8,7 @@
  * Controller of the appstoreApp
  */
 angular.module('appstoreApp')
-  .controller('JhItemDetailCtrl', function ($scope,$rootScope, $routeParams, naguBz, naguMM, naguUrpZc, siteConfig,$q) {
+  .controller('JhItemDetailCtrl', function ($scope,$rootScope, $routeParams, naguBz, naguMM, naguUrpZc, siteConfig,$q, $location) {
     $scope.loading.visible = true;
     $scope.item = {
       Id: $routeParams['itemId'],
@@ -77,4 +77,61 @@ angular.module('appstoreApp')
       $scope.loading.visible = false;
     });
 
+    $scope.controls = {
+      // 验证字段值不为空，出错时显示提示
+      validate: function(field, name){
+        var bo = {
+          title: '出错了',
+          content:'xx不能为空',
+          autoClose: 2000,
+          position: {
+            x: 'center',
+            y: 'center'
+          }
+        };
+        if(!$scope.item[field]){
+          bo.content = name + '不能为空';
+          new jBox('Notice', bo);
+          return false;
+        }
+        return true;
+      },
+      // 保存前进行验证
+      validateBeforeSave: function(){
+        var hjje = $scope.item.Sl * $scope.item.Ysdj;
+        if(isNaN(hjje) || hjje <= 0) {
+          new jBox('Notice', {
+            title: '出错了',
+            content:'数量和预算单价不能为0',
+            autoClose: 2000,
+            position: {
+              x: 'center',
+              y: 'center'
+            }
+          });
+          return false;
+        }
+
+        if(!$scope.controls.validate('HwlxId','货物类型')
+          || !$scope.controls.validate('Tymc','通用名称')
+          || !$scope.controls.validate('Sl','数量')
+          || !$scope.controls.validate('Jldw','计量单位')
+          || !$scope.controls.validate('Ysdj','预算单价')
+          || !$scope.controls.validate('Jhdd','交货地点'))
+          return false;
+        else return true;
+      }
+    };
+    $scope.actions = {
+      // 保存并返回采购计划表页面
+      createOrSaveAndReturn: function(){
+        if(!$scope.controls.validateBeforeSave()) return;
+
+        naguUrpZc.CgJh.updateItem($scope.item).then(function(item){
+          $location.url('/jh/detail/'+ item.JhbId);
+        }, function(result){
+          alert(result.msg);
+        });
+      }
+    };
   });
