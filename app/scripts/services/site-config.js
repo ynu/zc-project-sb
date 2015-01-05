@@ -8,7 +8,7 @@
  * Service in the appstoreApp.
  */
 angular.module('appstoreApp')
-  .service('siteConfig', function () {
+  .service('siteConfig', function ($location) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     return {
       AppId: '944c4890-a848-44b0-b1d7-a50217cfd405',
@@ -33,6 +33,9 @@ angular.module('appstoreApp')
           }).length > 0
         }
         return false;
+      },
+      redirectToLogin: function(){
+        window.location = 'http://members.apps.ynu.edu.cn/#/user/login?returnUrl='+ encodeURIComponent($location.absUrl());
       }
     }
   });

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4ebe821-c922-496b-be27-28946eec768e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/item-detail.html" afterPath="$PROJECT_DIR$/app/views/jh/item-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/detail.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/detail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jh/list.html" afterPath="$PROJECT_DIR$/app/views/jh/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/nav-bar.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/nav-bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/site-config.js" afterPath="$PROJECT_DIR$/app/scripts/services/site-config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zc-project-sb.iws" />
@@ -44,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/jh/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44014734" vertical-offset="1148" max-vertical-offset="1805">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.5" vertical-offset="1148" max-vertical-offset="1805">
+              <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -110,29 +108,56 @@
       <file leaf-file-name="item-detail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2394">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="2185">
+              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
               <folding>
-                <element signature="e#1415#1983#0" expanded="false" />
-                <element signature="e#1552#1967#0" expanded="false" />
+                <element signature="e#377#453#0" expanded="false" />
+                <element signature="e#483#740#0" expanded="false" />
+                <element signature="e#1616#2031#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nav-bar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/nav-bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="855">
+              <caret line="34" column="131" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site-config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/site-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="893">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="2223">
-              <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.70668954" vertical-offset="481" max-vertical-offset="1843">
+              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
-                <element signature="e#809#1224#0" expanded="false" />
-                <element signature="e#1327#1366#0" expanded="false" />
-                <element signature="e#1384#1424#0" expanded="false" />
-                <element signature="e#2217#2408#0" expanded="false" />
-                <element signature="e#2492#2665#0" expanded="false" />
-                <element signature="e#2711#2893#0" expanded="false" />
-                <element signature="e#3064#3093#0" expanded="false" />
+                <element signature="e#340#508#0" expanded="false" />
+                <element signature="e#889#1304#0" expanded="false" />
+                <element signature="e#1407#1446#0" expanded="false" />
+                <element signature="e#1464#1504#0" expanded="false" />
+                <element signature="e#1600#1643#0" expanded="false" />
+                <element signature="e#1739#1782#0" expanded="false" />
+                <element signature="e#1878#1921#0" expanded="false" />
+                <element signature="e#2036#2081#0" expanded="false" />
+                <element signature="e#2171#2224#0" expanded="false" />
+                <element signature="e#2491#2682#0" expanded="false" />
+                <element signature="e#2766#2939#0" expanded="false" />
+                <element signature="e#2985#3167#0" expanded="false" />
+                <element signature="e#3338#3367#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -183,20 +208,20 @@
         <option value="$PROJECT_DIR$/test/spec/controllers/sbb/list.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/sbb/new.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/sbb/show.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/site-config.js" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/app/views/jh/detail.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/list.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/new.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/jh/detail.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-new.js" />
         <option value="$PROJECT_DIR$/app/views/jh/item-detail.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/nav-bar.js" />
         <option value="$PROJECT_DIR$/app/views/jh/list.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/site-config.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/jh/detail.js" />
       </list>
     </option>
   </component>
@@ -526,6 +551,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zc-project-sb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zc-project-sb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -748,7 +795,13 @@
       <option name="project" value="LOCAL" />
       <updated>1419918834955</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="开始1.5.0">
+      <created>1420419086361</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1420419086361</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -756,6 +809,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -771,7 +825,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -811,11 +864,12 @@
     <MESSAGE value="采购计划列表不显示项目编号" />
     <MESSAGE value="修复bug" />
     <MESSAGE value="jbox使用cdn" />
-    <option name="LAST_COMMIT_MESSAGE" value="jbox使用cdn" />
+    <MESSAGE value="开始1.5.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="开始1.5.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -838,6 +892,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7980">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -866,6 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7980">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,6 +950,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7980">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,6 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7980">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,13 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/site-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2054054" vertical-offset="0" max-vertical-offset="555">
@@ -1100,17 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="2584">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#329#488#0" expanded="false" />
-            <element signature="e#1933#2286#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22965641" vertical-offset="5877" max-vertical-offset="7961">
@@ -1122,6 +1162,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12890625" vertical-offset="6128" max-vertical-offset="7220">
           <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,33 +1182,6 @@
             <element signature="n#div#0;n#div#8;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
             <element signature="n#div#9;n#form#0;n#div#1;n#div#1;n#!!top" expanded="false" />
             <element signature="n#thead#0;n#table#0;n#div#1;n#div#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="2223">
-          <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
-          <folding>
-            <element signature="e#809#1224#0" expanded="false" />
-            <element signature="e#1327#1366#0" expanded="false" />
-            <element signature="e#1384#1424#0" expanded="false" />
-            <element signature="e#2217#2408#0" expanded="false" />
-            <element signature="e#2492#2665#0" expanded="false" />
-            <element signature="e#2711#2893#0" expanded="false" />
-            <element signature="e#3064#3093#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2394">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#1415#1983#0" expanded="false" />
-            <element signature="e#1552#1967#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1205,13 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/nav-bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05488851" vertical-offset="177" max-vertical-offset="855">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/new.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="2223">
@@ -1224,9 +1231,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jh/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44014734" vertical-offset="1148" max-vertical-offset="1805">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.5" vertical-offset="1148" max-vertical-offset="1805">
+          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/site-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="893">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/nav-bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="855">
+          <caret line="34" column="131" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="2584">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#329#488#0" expanded="false" />
+            <element signature="e#1933#2286#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/item-detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="2185">
+          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <folding>
+            <element signature="e#377#453#0" expanded="false" />
+            <element signature="e#483#740#0" expanded="false" />
+            <element signature="e#1616#2031#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/jh/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70668954" vertical-offset="481" max-vertical-offset="1843">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#340#508#0" expanded="false" />
+            <element signature="e#889#1304#0" expanded="false" />
+            <element signature="e#1407#1446#0" expanded="false" />
+            <element signature="e#1464#1504#0" expanded="false" />
+            <element signature="e#1600#1643#0" expanded="false" />
+            <element signature="e#1739#1782#0" expanded="false" />
+            <element signature="e#1878#1921#0" expanded="false" />
+            <element signature="e#2036#2081#0" expanded="false" />
+            <element signature="e#2171#2224#0" expanded="false" />
+            <element signature="e#2491#2682#0" expanded="false" />
+            <element signature="e#2766#2939#0" expanded="false" />
+            <element signature="e#2985#3167#0" expanded="false" />
+            <element signature="e#3338#3367#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

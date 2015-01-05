@@ -31,7 +31,7 @@ angular.module('appstoreApp')
 
     var dtdMe = naguMM.getMe();
     dtdMe.then(function(me){
-      if(me.Id){
+      if(me.Id){                                                                        // 用户已登录
         $scope.me = me;
         $scope.user = me;
         var dtdRoles = naguMM.roles(siteConfig.AppId);
@@ -78,6 +78,8 @@ angular.module('appstoreApp')
         $q.all([dtdMember, dtdXb001, dtdJhb, dtdRoles, dtdXb010]).then(function(datas){
           $scope.loading.visible = false;
         });
+      } else {                                                                        // 当前用户未登录
+        siteConfig.redirectToLogin();                                                 // 跳转至登录页面
       }
     });
 

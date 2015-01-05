@@ -55,7 +55,7 @@ angular.module('appstoreApp')
 
     var dtdMe = naguMM.getMe();
     dtdMe.then(function(me){
-      if(me.Id){
+      if(me.Id){                                                      // 当前用户已登录
         $scope.user = me;
         var dtdRoles = naguMM.roles(siteConfig.AppId);
         dtdRoles.then(function(roles){
@@ -70,6 +70,8 @@ angular.module('appstoreApp')
             alert('无权限');
           }
         });
+      } else {                                                        // 当前用户未登录
+      siteConfig.redirectToLogin();                                   // 跳转至登录页面
       }
     });
 
