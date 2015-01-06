@@ -142,8 +142,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19372694" vertical-offset="940" max-vertical-offset="7182">
-              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.1402214" vertical-offset="798" max-vertical-offset="7087">
+              <caret line="46" column="93" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -805,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420509911240</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="删除IE7以下浏览器提示">
+      <created>1420509943515</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1420509943515</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -872,7 +878,8 @@
     <MESSAGE value="当用户未登录时，跳转至登录页面" />
     <MESSAGE value="修改页头样式" />
     <MESSAGE value="使版本号在xs的时候不可见" />
-    <option name="LAST_COMMIT_MESSAGE" value="使版本号在xs的时候不可见" />
+    <MESSAGE value="删除IE7以下浏览器提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除IE7以下浏览器提示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1299,8 +1306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19372694" vertical-offset="940" max-vertical-offset="7182">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.1402214" vertical-offset="798" max-vertical-offset="7087">
+          <caret line="46" column="93" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
           <folding />
         </state>
       </provider>
